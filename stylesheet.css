@@ -4,6 +4,7 @@ body {
 	grid-template-rows: 2fr 2fr 13fr 1fr;
 	margin: 0 auto;
     max-width: 100em;
+	font-family: Helvetica, Arial, sans-serif;
 }
 header {
 	grid-column: 1 / 3;
@@ -12,11 +13,15 @@ header {
 	grid-template-columns: 1fr 7fr;
 	grid-template-rows: 2fr 2fr;
 	text-align: center;
-}
-#logo {
+	}
+#logobox{
 	grid-column: 1 / 2;
 	grid-row: 1 / 3;
+	display: grid;
+}
+#logo {
 	margin: auto;
+	background-color: #004678;	
 }
 #headline {
 	grid-column: 2 / 3;
@@ -27,6 +32,7 @@ nav {
 	grid-row: 2 / 3;
 	text-align: center;
 	vertical-align: middle;
+	border-bottom: thin solid #808080;
 }
 li {
 	display: inline;
@@ -36,10 +42,14 @@ li {
 aside {
 	grid-column: 1 / 2;
 	grid-row: 3 / 4;
+	background-color: #F2F2F2;
+	border-bottom: thin solid #808080;
+	border-right: thin solid #808080;
 }
 main {
 	grid-column: 2 / 3;
 	grid-row: 3 / 4;
+	border-bottom: thin solid #808080;
 }
 footer {
 	grid-column: 1 / 3;
