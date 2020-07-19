@@ -10,12 +10,17 @@ header {
 	grid-row: 1 / 2;
 	display: grid;
 	text-align: center;
-	}
+}
+#headline {
+	display: inline-block;
+		}
+a.head:any-link {
+	color: #FA820A;
+	text-decoration: none;
+}
 #logo {
 	background-color: #004678;
 	float: left;
-	height: 100%;
-	width: auto;
 }
 nav {
 	grid-column: 1 / 3;
