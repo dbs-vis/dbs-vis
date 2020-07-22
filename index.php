@@ -1,31 +1,6 @@
-<!DOCTYPE html>
-<html lang="de">
-	<head>
-		<title>Startseite - dbs-vis</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="stylesheet.css">
-		<link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="any">
-	</head>
-	<body>
-		<header>
-			<div id="headline">
-				<a href="index.html" class="head">
-					<img id="logo" alt="" src="logo.svg">
-					<h1>DBS-Vis</h1>	
-				</a>
-			</div>
-		</header>
-		<nav>
-			<ul>
-				<li><a href="stop.html">Statistik</a></li>
-				<li><a href="stop.html">Anleitung</a></li>
-				<li><a href="stop.html">Hintergrund</a></li>
-				<li><a href="stop.html">Blog</a></li>
-				<li><a href="stop.html">Konto</a></li>
-			</ul>
-		</nav>
-		<div id="pageactions">
+<?php
+	include ("./includes/header.php");
+?>
 			Hier stünde die Navigation der aktuellen Seite.
 		</div>
 		<main>
@@ -47,13 +22,6 @@
 				</header>
 				Hier sollen mal die aktuellsten Blogeinträge zu sehen sein.
 			</article>
-		</main>
-		<footer>
-			<ul>
-				<li><a href="stop.html">Kontaktformular</a></li>
-				<li><a href="impressum.html">Impressum</a></li>
-				<li>Stand: 20.07.2020</li>
-			</ul>
-		</footer>
-	</body>
-</html>
+<?php
+	include ("./includes/footer.php");
+?>		
