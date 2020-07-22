@@ -1,4 +1,4 @@
-?php
+<?php
 	include ("./includes/header.php");
 ?>
 			Hier stünde die Navigation der aktuellen Seite.
