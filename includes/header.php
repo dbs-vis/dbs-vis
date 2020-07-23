@@ -18,7 +18,7 @@
 		</header>
 		<nav>
 			<ul>
-				<li><a href="stop.php">Statistik</a></li>
+				<li><a href="search.php">Suche</a></li>
 				<li><a href="stop.php">Anleitung</a></li>
 				<li><a href="stop.php">Hintergrund</a></li>
 				<li><a href="stop.php">Blog</a></li>
