@@ -85,11 +85,32 @@
 
 				</script>
 			</article>
-			<article>
+			<article id="bib_list">
 				<header>
 					<h2>Liste</h2>
 				</header>
-				Hier werden die verfügbaren Bibliotheken angezeigt.
+				<?php
+					$servername = "localhost";
+					$username = "root";
+					$password = "";
+					$database = "bibs_data_db";
+
+					// Create connection
+					$conn = mysqli_connect($servername, $username, $password, $database);
+
+					// Check connection
+					if (!$conn) {
+					  die("Connection failed: " . mysqli_connect_error());
+					}
+					$sql = "SELECT name, laenge, breite FROM `bibs_data_table` WHERE 1";
+					$result = mysqli_query($conn, $sql);
+					// output data of each row
+					while($row = mysqli_fetch_assoc($result)) {
+					echo "Name: " . $row["name"]. " - Koordinaten: " . $row["laenge"]. " " . $row["breite"]. "<br>";
+					}
+					
+					mysqli_close($conn);
+				?>
 			</article>
 <?php
 	include ("./includes/footer.php");

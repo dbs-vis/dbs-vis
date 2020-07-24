@@ -40,6 +40,9 @@ nav {
 	border-top: thin solid #808080;
 	border-bottom: thin solid #808080;
 }
+#bib_list {
+	overflow-y: scroll;
+}
 #headline {
 	display: inline-block;
 	font-weight: bold;
