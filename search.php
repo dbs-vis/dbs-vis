@@ -35,21 +35,54 @@
 						// Karten anlegen
 						var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 							maxZoom: 19,
-							attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>'
+							attribution: 'Map data &copy;<a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>'
 						});
-						var map = L.map(mapcanvas, { layers: osm, tap: false } ) ;	
-					
+						
+						var map = L.map(mapcanvas, { layers: osm, tap: false } ) ;
+						
 						// Mit Maßstab
-						L.control.scale({imperial:false}).addTo(map); 
-
+						L.control.scale({imperial:false}).addTo(map);
+						
 						//Kartenausschnitt wählen
 						var bounds = [ [55.4, 5.7], [46.4, 17.2] ];
 						map.fitBounds( bounds );
-					
+						
 						// Karte bei resize neu skalieren
 						map.on("resize", function(e){
 							map.fitBounds( bounds );
 						});
+
+						<?php
+							error_reporting(E_ALL);
+							ini_set('display_errors', 1);
+							
+							$servername = "localhost";
+							$username = "root";
+							$password = "";
+							$database = "bibs_data_db";
+
+							// Create connection
+							$conn = mysqli_connect($servername, $username, $password, $database);
+
+							// Check connection
+							if (!$conn) {
+								die("Connection failed: " . mysqli_connect_error());
+							}
+
+							// Create Query
+							$sql = "SELECT name, ST_X(pt) AS laenge, ST_Y(pt) AS breite FROM bibs_data_table;";
+							$result = mysqli_query($conn, $sql);
+							$row = mysqli_fetch_assoc($result);
+							while ($row = mysqli_fetch_assoc($result)) {
+								echo "L.marker([", $row["breite"], ", ", $row['laenge'], "]).addTo(map).bindPopup('", $row["name"], "');";
+							}
+
+							/* free result set */
+							mysqli_free_result($result);
+
+							/* close connection */
+							mysqli_close($conn);
+						?>
 					}
 
 					function loadScript(url,callback) {
@@ -89,34 +122,7 @@
 				<header>
 					<h2>Liste</h2>
 				</header>
-				<?php
-					$servername = "localhost";
-					$username = "root";
-					$password = "";
-					$database = "bibs_data_db";
-
-					// Create connection
-					$conn = mysqli_connect($servername, $username, $password, $database);
-
-					// Check connection
-					if (!$conn) {
-					  die("Connection failed: " . mysqli_connect_error());
-					}
-					
-					// Create Query
-					$sql = "SELECT name, laenge, breite FROM `bibs_data_table` WHERE 1";
-					$result = mysqli_query($conn, $sql);
-					
-					// Output data of each row
-					$bibs_data = [];
-					while($row = mysqli_fetch_assoc($result)) {
-						$bibs_data[] = $row["name"];
-						$bibs_data[] = $row["laenge"];
-						$bibs_data[] = $row["breite"];
-					}
-					
-					mysqli_close($conn);
-				?>
+				Hier soll zukünftig eine Liste aller auf der Karte angezeigten Bibliotheken zu sehen sein.
 			</article>
 <?php
 	include ("./includes/footer.php");
