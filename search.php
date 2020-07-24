@@ -102,11 +102,17 @@
 					if (!$conn) {
 					  die("Connection failed: " . mysqli_connect_error());
 					}
+					
+					// Create Query
 					$sql = "SELECT name, laenge, breite FROM `bibs_data_table` WHERE 1";
 					$result = mysqli_query($conn, $sql);
-					// output data of each row
+					
+					// Output data of each row
+					$bibs_data = [];
 					while($row = mysqli_fetch_assoc($result)) {
-					echo "Name: " . $row["name"]. " - Koordinaten: " . $row["laenge"]. " " . $row["breite"]. "<br>";
+						$bibs_data[] = $row["name"];
+						$bibs_data[] = $row["laenge"];
+						$bibs_data[] = $row["breite"];
 					}
 					
 					mysqli_close($conn);
