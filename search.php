@@ -59,7 +59,7 @@
 							$servername = "localhost";
 							$username = "root";
 							$password = "";
-							$database = "bibs_data_db";
+							$database = "dbs_vis_db";
 
 							// Create connection
 							$conn = mysqli_connect($servername, $username, $password, $database);
