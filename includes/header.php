@@ -12,7 +12,7 @@
 			<div id="headline">
 				<a href="index.php" class="head">
 					<img id="logo" alt="" src="graphics/logo.svg">
-					<h1>DBS-Vis</h1>	
+					<h1>DBS-Vis</h1>
 				</a>
 			</div>
 		</header>

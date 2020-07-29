@@ -52,36 +52,12 @@
 							map.fitBounds( bounds );
 						});
 
-						<?php
-							error_reporting(E_ALL);
-							ini_set('display_errors', 1);
-							
-							$servername = "localhost";
-							$username = "root";
-							$password = "";
-							$database = "dbs_vis_db";
+						<?php session_start(); require('mysql.php');
 
-							// Create connection
-							$conn = mysqli_connect($servername, $username, $password, $database);
-
-							// Check connection
-							if (!$conn) {
-								die("Connection failed: " . mysqli_connect_error());
+							$sql = "SELECT dbsid, name, ST_X(pt) AS laenge, ST_Y(pt) AS breite FROM bibs_data_table;";
+							foreach ($conn->query($sql) as $row) {
+								echo "L.marker([", $row["breite"], ", ", $row['laenge'], "]).addTo(map).bindPopup('<a href=graph.php?id=", $row["dbsid"], ">", $row["name"], "</a>');";
 							}
-
-							// Create Query
-							$sql = "SELECT name, ST_X(pt) AS laenge, ST_Y(pt) AS breite FROM bibs_data_table;";
-							$result = mysqli_query($conn, $sql);
-							$row = mysqli_fetch_assoc($result);
-							while ($row = mysqli_fetch_assoc($result)) {
-								echo "L.marker([", $row["breite"], ", ", $row['laenge'], "]).addTo(map).bindPopup('", $row["name"], "');";
-							}
-
-							/* free result set */
-							mysqli_free_result($result);
-
-							/* close connection */
-							mysqli_close($conn);
 						?>
 					}
 
