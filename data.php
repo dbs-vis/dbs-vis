@@ -22,6 +22,7 @@
 		$getName->execute(array($_GET['id']));
 		if ($getName->rowCount() == 1) {
 			$row = $getName->fetch(PDO::FETCH_ASSOC);
+			$lib_name = $row["name"];
 
 			echo '<div class="divTable" style="width: 100%;border: 1px solid #000;" >';
 			echo '<div class="divTableBody">';
@@ -52,7 +53,63 @@
 			$row = $getChart->fetch(PDO::FETCH_ASSOC);
 			echo '<script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.1.1.min.js"></script>';
 			echo '<script>item = JSON.parse(\''.$row["cjson"].'\');Bokeh.embed.embed_item(item);</script>';
-			echo '<div id="'.$_GET['id'].'" class="mybokehplot bk-root"></div>';
+			echo '<div id="inline" style="display:inline;width:100%;height:auto;display:flex;"><div id="'.$_GET['id'].'" class="mybokehplot bk-root" align="center" style="display:inline;"></div>';
+			
+			echo '<div class="divTable" align="center" style="position:relative;height:100%;display:inline;align-self:center;" >';
+			echo '<div class="divTableBody">';
+            
+			echo '<div class="divTableRow">';
+			echo '<div class="divTableCell">B.1.2.4</div>';
+			echo '<div class="divTableCell">Erfolgreiche Fernleihen</div>';
+			echo '</div>';
+			echo '<div class="divTableRow">';
+			echo '<div class="divTableCell">B.1.3.1</div>';
+			echo '<div class="divTableCell">Verhältnis von Nutzungsfläche zu Primärnutzerschaft</div>';
+			echo '</div>';
+			echo '<div class="divTableRow">';
+			echo '<div class="divTableCell">B.1.3.2</div>';
+			echo '<div class="divTableCell">Verhältnis von Arbeitsplätzen zu Primärnutzerschaft</div>';
+			echo '</div>';
+			echo '<div class="divTableRow">';
+			echo '<div class="divTableCell">B.1.4.1</div>';
+			echo '<div class="divTableCell">Verhältnis von Belegschaft zu Primärnutzerschaft</div>';
+			echo '</div>';
+			echo '<div class="divTableRow">';
+			echo '<div class="divTableCell">B.2.2.1</div>';
+			echo '<div class="divTableCell">Verhältnis von Bibliotheksbesuchen zu Primärnutzerschaft</div>';
+			echo '</div>';
+			echo '<div class="divTableRow">';
+			echo '<div class="divTableCell">B.2.2.4</div>';
+			echo '<div class="divTableCell">Verhältnis von Bibliotheksveranstaltungsbesuchen zu Primärnutzerschaft</div>';
+			echo '</div>';
+			echo '<div class="divTableRow">';
+			echo '<div class="divTableCell">B.2.2.5</div>';
+			echo '<div class="divTableCell">Verhältnis von Schulungsbesuchen zu Primärnutzerschaft</div>';
+			echo '</div>';
+			echo '<div class="divTableRow">';
+			echo '<div class="divTableCell">B.3.3.3</div>';
+			echo '<div class="divTableCell">Verhältnis von Erwerbungs- zu Personalkosten</div>';
+			echo '</div>';
+			echo '<div class="divTableRow">';
+			echo '<div class="divTableCell">B.3.4.1</div>';
+			echo '<div class="divTableCell">Kosten pro aktive Nutzende</div>';
+			echo '</div>';
+			echo '<div class="divTableRow">';
+			echo '<div class="divTableCell">B.3.4.2</div>';
+			echo '<div class="divTableCell">Kosten pro Bibliotheksbesuch</div>';
+			echo '</div>';
+			echo '<div class="divTableRow">';
+			echo '<div class="divTableCell">B.4.2.2</div>';
+			echo '<div class="divTableCell">Schulungsstunden pro Belegschaftsmitglied</div>';
+			echo '</div>';
+			echo '<div class="divTableRow">';
+			echo '<div class="divTableCell">B.4.3.1</div>';
+			echo '<div class="divTableCell">Anteil von Sonderzuschüssen und selbst generierten Einnahmen am Gesamtbudget</div>';
+			echo '</div>';
+
+			echo '</div>';
+			echo '</div>';
+			echo '</div>';
 		}
 
 		$getCoreData = $conn->prepare("SELECT B124, B131, B132, B141, B221, B224, B225, B333, B341, B342, B422, B431 FROM core_data_table WHERE dbsid= ?");
@@ -62,73 +119,70 @@
 	
 			$row = $getCoreData->fetch(PDO::FETCH_ASSOC);
 
-			echo '<div class="divTable" style="width: 100%;border: 1px solid #000;" >';
+			echo '<div class="divTable" style="width: 100%; border: 1px solid #000;" >';
 			echo '<div class="divTableBody">';
 
-			echo '<div class="divTableRow">';
-			echo '<div class="divTableCell">Diagramm:</div>';
-			echo '<div class="divTableCell">B.1.2.4:</div>';
-			echo '<div class="divTableCell">B.1.3.1:</div>';
-			echo '<div class="divTableCell">B.1.3.2:</div>';
-			echo '<div class="divTableCell">B.1.4.1:</div>';
-			echo '<div class="divTableCell">B.2.2.1:</div>';
-			echo '<div class="divTableCell">B.2.2.4:</div>';
-			echo '<div class="divTableCell">B.2.2.5:</div>';
-			echo '<div class="divTableCell">B.3.3.3:</div>';
-			echo '<div class="divTableCell">B.3.4.1:</div>';
-			echo '<div class="divTableCell">B.3.4.2:</div>';
-			echo '<div class="divTableCell">B.4.2.2:</div>';
-			echo '<div class="divTableCell">B.4.3.1:</div>';
+			echo '<div class="divTableRow" style="background-color: #F2F2F2">';
+			echo '<div class="divTableCell">Diagrammwerte</div>';
+			echo '<div class="divTableCell">B.1.2.4</div>';
+			echo '<div class="divTableCell">B.1.3.1</div>';
+			echo '<div class="divTableCell">B.1.3.2</div>';
+			echo '<div class="divTableCell">B.1.4.1</div>';
+			echo '<div class="divTableCell">B.2.2.1</div>';
+			echo '<div class="divTableCell">B.2.2.4</div>';
+			echo '<div class="divTableCell">B.2.2.5</div>';
+			echo '<div class="divTableCell">B.3.3.3</div>';
+			echo '<div class="divTableCell">B.3.4.1</div>';
+			echo '<div class="divTableCell">B.3.4.2</div>';
+			echo '<div class="divTableCell">B.4.2.2</div>';
+			echo '<div class="divTableCell">B.4.3.1</div>';
 			echo '</div>';
 			
-			$getMaxData = $conn->query("SELECT B124, B131, B132, B141, B221, B224, B225, B333, B341, B342, B422, B431 FROM core_data_table WHERE dbsid='MAX' AND cyear='2019'");
-			$MaxRow = $getMaxData->fetch();
-
 			echo '<div class="divTableRow">';
-			echo '<div class="divTableCell">Current:</div>';
+			echo '<div class="divTableCell" style="background-color: #F2F2F2">'.$lib_name.':</div>';
 			echo '<div class="divTableCell">';
-			if ($row["B124"]) echo round($row["B124"]*100/$MaxRow["B124"], 2).'%';
+			if ($row["B124"]) { echo $row["B124"]; } else { echo '-'; };
 			echo '</div><div class="divTableCell">';
-			if ($row["B131"]) echo round($row["B131"]*100/$MaxRow["B131"], 2).'%';
+			if ($row["B131"]) { echo $row["B131"]; } else { echo '-'; };
 			echo '</div><div class="divTableCell">';
-			if ($row["B132"]) echo round($row["B132"]*100/$MaxRow["B132"], 2).'%';
+			if ($row["B132"]) { echo $row["B132"]; } else { echo '-'; };
 			echo '</div><div class="divTableCell">';
-			if ($row["B141"]) echo round($row["B141"]*100/$MaxRow["B141"], 2).'%';
+			if ($row["B141"]) { echo $row["B141"]; } else { echo '-'; };
 			echo '</div><div class="divTableCell">';
-			if ($row["B221"]) echo round($row["B221"]*100/$MaxRow["B221"], 2).'%';
+			if ($row["B221"]) { echo $row["B221"]; } else { echo '-'; };
 			echo '</div><div class="divTableCell">';
-			if ($row["B224"]) echo round($row["B224"]*100/$MaxRow["B224"], 2).'%';
+			if ($row["B224"]) { echo $row["B224"]; } else { echo '-'; };
 			echo '</div><div class="divTableCell">';
-			if ($row["B225"]) echo round($row["B225"]*100/$MaxRow["B225"], 2).'%';
+			if ($row["B225"]) { echo $row["B225"]; } else { echo '-'; };
 			echo '</div><div class="divTableCell">';
-			if ($row["B333"]) echo round($row["B333"]*100/$MaxRow["B333"], 2).'%';
+			if ($row["B333"]) { echo $row["B333"]; } else { echo '-'; };
 			echo '</div><div class="divTableCell">';
-			if ($row["B341"]) echo round($row["B341"]*100/$MaxRow["B341"], 2).'%';
+			if ($row["B341"]) { echo $row["B341"]; } else { echo '-'; };
 			echo '</div><div class="divTableCell">';
-			if ($row["B342"]) echo round($row["B342"]*100/$MaxRow["B342"], 2).'%';
+			if ($row["B342"]) { echo $row["B342"]; } else { echo '-'; };
 			echo '</div><div class="divTableCell">';
-			if ($row["B422"]) echo round($row["B422"]*100/$MaxRow["B422"], 2).'%';
+			if ($row["B422"]) { echo $row["B422"]; } else { echo '-'; };
 			echo '</div><div class="divTableCell">';
-			if ($row["B431"]) echo round($row["B431"]*100/$MaxRow["B431"], 2).'%';
+			if ($row["B431"]) { echo $row["B431"]; } else { echo '-'; };
 			echo '</div></div>';
 
 			$getMedData = $conn->query("SELECT B124, B131, B132, B141, B221, B224, B225, B333, B341, B342, B422, B431 FROM core_data_table WHERE dbsid='MED' AND cyear='2019'");
 			$MedRow = $getMedData->fetch();
 			
 			echo '<div class="divTableRow">';
-			echo '<div class="divTableCell">Median:</div>';
-			echo '<div class="divTableCell">'.round($MedRow["B124"]*100/$MaxRow["B124"], 2).'%'.'</div>';
-			echo '<div class="divTableCell">'.round($MedRow["B131"]*100/$MaxRow["B131"], 2).'%'.'</div>';
-			echo '<div class="divTableCell">'.round($MedRow["B132"]*100/$MaxRow["B132"], 2).'%'.'</div>';
-			echo '<div class="divTableCell">'.round($MedRow["B141"]*100/$MaxRow["B141"], 2).'%'.'</div>';
-			echo '<div class="divTableCell">'.round($MedRow["B221"]*100/$MaxRow["B221"], 2).'%'.'</div>';
-			echo '<div class="divTableCell">'.round($MedRow["B224"]*100/$MaxRow["B224"], 2).'%'.'</div>';
-			echo '<div class="divTableCell">'.round($MedRow["B225"]*100/$MaxRow["B225"], 2).'%'.'</div>';
-			echo '<div class="divTableCell">'.round($MedRow["B333"]*100/$MaxRow["B333"], 2).'%'.'</div>';
-			echo '<div class="divTableCell">'.round($MedRow["B341"]*100/$MaxRow["B341"], 2).'%'.'</div>';
-			echo '<div class="divTableCell">'.round($MedRow["B342"]*100/$MaxRow["B342"], 2).'%'.'</div>';
-			echo '<div class="divTableCell">'.round($MedRow["B422"]*100/$MaxRow["B422"], 2).'%'.'</div>';
-			echo '<div class="divTableCell">'.round($MedRow["B431"]*100/$MaxRow["B431"], 2).'%'.'</div>';
+			echo '<div class="divTableCell" style="background-color: #F2F2F2">Median:</div>';
+			echo '<div class="divTableCell">'.$MedRow["B124"].'</div>';
+			echo '<div class="divTableCell">'.$MedRow["B131"].'</div>';
+			echo '<div class="divTableCell">'.$MedRow["B132"].'</div>';
+			echo '<div class="divTableCell">'.$MedRow["B141"].'</div>';
+			echo '<div class="divTableCell">'.$MedRow["B221"].'</div>';
+			echo '<div class="divTableCell">'.$MedRow["B224"].'</div>';
+			echo '<div class="divTableCell">'.$MedRow["B225"].'</div>';
+			echo '<div class="divTableCell">'.$MedRow["B333"].'</div>';
+			echo '<div class="divTableCell">'.$MedRow["B341"].'</div>';
+			echo '<div class="divTableCell">'.$MedRow["B342"].'</div>';
+			echo '<div class="divTableCell">'.$MedRow["B422"].'</div>';
+			echo '<div class="divTableCell">'.$MedRow["B431"].'</div>';
 			echo '</div>';
 
 			echo '</div>';
