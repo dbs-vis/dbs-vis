@@ -1,6 +1,6 @@
 <?php
 
-$dsn = 'mysql:dbname=dbs_vis_db;host=localhost';
+$dsn = 'mysql:dbname=dbs_vis_db;host=localhost;charset=utf8';
 $user = 'root';
 $password = ''; 
 
