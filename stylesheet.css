@@ -5,7 +5,6 @@ a.head:any-link {
 body {
     display: grid;
 	grid-template-columns: 1fr 7fr;
-//	grid-template-rows: 2fr 1fr 8fr 1fr;
 	margin: auto;
 	font-family: Helvetica, Arial, sans-serif;
 }
