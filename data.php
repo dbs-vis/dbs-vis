@@ -6,7 +6,7 @@
 </div>
 <main>
 <article>
-	<?php require('mysql.php');
+	<?php require 'mysql.php';
 	$getName = $conn->prepare("SELECT name,strasse,plz,ort,vorwahl,tel,url,öffnungszeiten,bestandsgrößenklasse,unterhaltsträger,dbv,leitung FROM bibs_data_table where dbsid= ?");
 	$getName->execute(array($_GET['id']));
 	
