@@ -1,5 +1,5 @@
 <?php
-	include ("./includes/header.php");
+	require './requires/header.php';
 ?>
 
 		</div>
@@ -9,5 +9,5 @@
 			</header>
 			Bitte entschuldigen Sie. Diese Seite existiert noch nicht.
 <?php
-	include ("./includes/footer.php");
+	require './requires/footer.php';
 ?>		

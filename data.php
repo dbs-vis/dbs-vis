@@ -1,5 +1,5 @@
 <?php
-        include ("./includes/header.php");
+    require './requires/header.php';
 	echo '<script src="https://cdn.bokeh.org/bokeh/release/bokeh-2.1.1.min.js"></script>';
 ?>
 
@@ -9,7 +9,7 @@
 				<header>
 					<h2>Formale Daten</h2>
 				</header>
-				<?php require 'mysql.php';
+				<?php require './requires/mysql.php';
 				$getName = $conn->prepare("SELECT name,strasse,plz,ort,vorwahl,tel,url,öffnungszeiten,bestandsgrößenklasse,unterhaltsträger,dbv,leitung FROM bibs_data_table where dbsid= ?");
 				$getName->execute(array($_GET['id']));
 
@@ -184,5 +184,5 @@
 			</article>
 
 <?php
-        include ("./includes/footer.php");
+	require './requires/footer.php';
 ?>

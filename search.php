@@ -1,5 +1,5 @@
 <?php
-	include ("./includes/header.php");
+	require './requires/header.php';
 ?>
 			Hier befindet sich das Steuerungsfeld.
 		</div>
@@ -52,7 +52,7 @@
 							map.fitBounds( bounds );
 						});
 
-						<?php session_start(); require 'mysql.php';
+						<?php session_start(); require './requires/mysql.php';
 
 							$sql = "SELECT dbsid, name, ST_X(pt) AS laenge, ST_Y(pt) AS breite FROM bibs_data_table;";
 							foreach ($conn->query($sql) as $row) {
@@ -113,5 +113,5 @@
 				</form>
 			</article>
 <?php
-	include ("./includes/footer.php");
+	require './requires/footer.php';
 ?>	

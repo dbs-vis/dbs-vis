@@ -1,5 +1,5 @@
 <?php
-	include ("./includes/header.php");
+	require './requires/header.php';
 ?>
 		</div>
 		<main>
@@ -22,5 +22,5 @@
 				Hier sollen mal die aktuellsten Blogeinträge zu sehen sein.
 			</article>
 <?php
-	include ("./includes/footer.php");
+	require './requires/footer.php';
 ?>		

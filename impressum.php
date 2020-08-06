@@ -1,5 +1,5 @@
 <?php
-	include ("./includes/header.php");
+	require './requires/header.php';
 ?>
 		</div>
 		<main>
@@ -8,5 +8,5 @@
 			</header>
 			Verantwortlich für den Inhalt dieser Seite ist Johannes Graupe, Breslauer Str. 4, 63486 Bruchköbel.
 <?php
-	include ("./includes/footer.php");
+	require './requires/footer.php';
 ?>		
