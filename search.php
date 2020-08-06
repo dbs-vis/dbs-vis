@@ -58,7 +58,6 @@
 							foreach ($conn->query($sql) as $row) {
 								echo "L.marker([", $row["breite"], ", ", $row['laenge'], "]).addTo(map).bindPopup('<a href=data.php?id=", $row["dbsid"], ">", $row["name"], "</a>');";
 							}
-							$conn = null;
 						?>
 					}
 
@@ -101,12 +100,13 @@
 				</header>
 				<form action="data.php" method="get">
 					<select name=id>
-					<?php
-						$sql = "SELECT dbsid, name, strasse, plz, ort FROM bibs_data_table;";
-						foreach ($conn->query($sql) as $row) {
-							echo "<option value=", $row["dbsid"], ">", $row["name"], "</option>";
-						}   
-					?>
+						<?php
+							$sql = "SELECT dbsid, name FROM bibs_data_table;";
+							foreach ($conn->query($sql) as $row) {
+								echo "<option value=", $row["dbsid"], ">", $row["name"], "</option>";
+							}
+							$conn = null;
+						?>
 					</select>
 					<br><br>
   					<input type="submit" value="Finden">
