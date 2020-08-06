@@ -16,13 +16,47 @@
 				</a>
 			</div>
 		</header>
+		<?php
+			$pages = [
+				[
+					'name' => 'search',
+					'linktext' => 'Suche',
+				],
+				[
+					'name' => 'stop',
+					'linktext' => 'Anleitung',
+				],
+				[
+					'name' => 'stop',
+					'linktext' => 'Hintergrund',
+				],
+				[
+					'name' => 'stop',
+					'linktext' => 'Blog',
+				],
+				[
+					'name' => 'stop',
+					'linktext' => 'Konto',
+				],
+			];
+
+			foreach ($pages as $index => $page) :
+			  $listitem = "<li";
+			  if ($_SERVER["SCRIPT_NAME"] == "/dbs-vis/" . $page["name"] . ".php") :
+				$listitem .= " aria-current='page'><a>";
+			  else :
+				$listitem .= "><a href='" . $page["name"] . ".php'>";
+			  endif;
+			  $listitem .= $page["linktext"] . "</a></li>";
+			  $pages[$index]["listitem"] = $listitem;
+			endforeach;
+		?>
 		<nav>
 			<ul>
-				<li><a href="./search.php">Suche</a></li>
-				<li><a href="./stop.php">Anleitung</a></li>
-				<li><a href="./stop.php">Hintergrund</a></li>
-				<li><a href="./stop.php">Blog</a></li>
-				<li><a href="./stop.php">Konto</a></li>
+				<?php
+					foreach ($pages as $page) : echo $page["listitem"];
+					endforeach;
+				?>
 			</ul>
 		</nav>
 		<div id="pageactions">
