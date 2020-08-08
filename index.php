@@ -3,6 +3,7 @@
 ?>
 		</div>
 		<main>
+			<title>Startseite - dbs-vis</title>
 			<article>
 				<header>
 					<h2>Suche</h2>
