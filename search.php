@@ -4,7 +4,6 @@
 			Hier befindet sich das Steuerungsfeld.
 		</div>
 		<main>
-			<title>Suche - dbs-vis</title>
 			<article>
 				<header>
 					<h2>Karte</h2>
