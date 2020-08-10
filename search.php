@@ -99,15 +99,18 @@
 					<h2 id="list">Liste</h2>
 				</header>
 				<form action="data.php" method="get">
-					<select name=id>
-						<?php
-							$sql = "SELECT dbsid, name FROM bibs_data_table;";
-							foreach ($conn->query($sql) as $row) {
-								echo "<option value=", $row["dbsid"], ">", $row["name"], "</option>";
-							}
-							$conn = null;
-						?>
-					</select>
+					<label>
+						<select name=id>
+							<?php
+								$sql = "SELECT dbsid, name FROM bibs_data_table;";
+								foreach ($conn->query($sql) as $row) {
+									echo "<option value=", $row["dbsid"], ">", $row["name"], "</option>";
+								}
+								$conn = null;
+							?>
+						</select>
+						Auswahl der gewünschten Bibliothek aus der Liste.
+					</label>
 					<br><br>
   					<input type="submit" value="Finden">
 				</form>
