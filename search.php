@@ -6,9 +6,9 @@
 		<main>
 			<article>
 				<header>
-					<h2>Karte</h2>
+					<h2 id="map">Karte</h2>
 				</header>
-				<figure id="map">
+				<figure id="mapcontent">
 					<p>Diese Seite lädt das Leaflet-Script von <a href="https://unpkg.com" target="_blank">unpkg.com</a> sowie das Kartenmaterial von <a href="https://www.openstreetmap.org/">OpenStreetMap</a>.</p>
 					<p>Ist das <button type="button" id="okButton">OK</button>?</p>
 				</figure>
@@ -29,7 +29,7 @@
 					}
 				
 					function kartenScript() {
-						var mapcanvas = document.querySelector("#map");
+						var mapcanvas = document.querySelector("#mapcontent");
 						mapcanvas.innerHTML = "";
 						
 						// Karten anlegen
