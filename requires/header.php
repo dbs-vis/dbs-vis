@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="de">
 <?php
+	//Verzeichnis aller Seiten der Website außer der Startseite (index.php)
 	$pages = [
-		['name' => 'search',	'linktext' => 'Suche',				'place' => 'header' ],
-		['name' => 'stop',		'linktext' => 'Anleitung',			'place' => 'header' ],
-		['name' => 'stop',		'linktext' => 'Hintergrund',		'place' => 'header' ],
-		['name' => 'stop',		'linktext' => 'Blog',				'place' => 'header' ],
-		['name' => 'stop',		'linktext' => 'Konto',				'place' => 'header'],
-		['name' => 'stop',		'linktext' => 'Kontaktformular',	'place' => 'footer'],
+		['name' => 'search',	'linktext' => 'Suche',				'place' => 'header'],
+		['name' => 'guidance',	'linktext' => 'Anleitung',			'place' => 'header'],
+		['name' => 'background','linktext' => 'Hintergrund',		'place' => 'header'],
+		['name' => 'blog',		'linktext' => 'Blog',				'place' => 'header'],
+		['name' => 'login',		'linktext' => 'Konto',				'place' => 'header'],
+		['name' => 'contact',	'linktext' => 'Kontaktformular',	'place' => 'footer'],
 		['name' => 'impressum',	'linktext' => 'Impressum',			'place' => 'footer'],
 		['name' => 'data',		'linktext' => 'Daten',				'place' => 'nowhere'],
 	];
