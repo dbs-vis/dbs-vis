@@ -63,13 +63,13 @@
 						$row = $getChart->fetch(PDO::FETCH_ASSOC);
 						echo '<script>item_r = JSON.parse(\''.$row["cjson"].'\');Bokeh.embed.embed_item(item_r);</script>';
 						echo '<div id="inline" style="display:inline;width:100%;height:auto;display:flex;">';
-						echo '<div id="'.strtoupper($_GET['id']).'_radar" align="center" class="mybokehplot bk-root" style="display:inline;"></div>';
+						echo '<div id="'.strtoupper($_GET['id']).'_radar" class="mybokehplot bk-root" style="display:inline;"></div>';
 						echo '<div class="divTable" style="position:relative;height:100%;display:inline;align-self:center;" >';
 					}
 					else {
 						echo '<script>item_r = JSON.parse(\''.$MedChart["cjson"].'\');Bokeh.embed.embed_item(item_r);</script>';
 						echo '<div id="inline" style="display:inline;width:100%;height:auto;display:flex;">';
-						echo '<div id="MED_radar" align="center" class="mybokehplot bk-root" style="display:inline;"></div>';
+						echo '<div id="MED_radar" class="mybokehplot bk-root" style="display:inline;"></div>';
 						echo '<div class="divTable" style="position:relative;height:100%;display:inline;align-self:center;" >';
 						echo '<div align="center" style="height:100px; width:100%;"><br><br>Für das laufende Berichtsjahr liegen keine Daten vor.</div>';
 					}
@@ -184,7 +184,7 @@
 					if ($getBoxPlot->rowCount() > 0) {
 						$row = $getBoxPlot->fetch(PDO::FETCH_ASSOC);
 						echo '<br><script>item_b = JSON.parse(\''.$row["cjson"].'\');Bokeh.embed.embed_item(item_b);</script>';
-						echo '<div id="'.strtoupper($_GET['id']).'_boxplot" align="center" class="mybokehplot bk-root"></div>';
+						echo '<div id="'.strtoupper($_GET['id']).'_boxplot" class="mybokehplot bk-root" style="display:flex; justify-content: center; align-items:center;"></div>';
 					}
 					?>
 			</article>
