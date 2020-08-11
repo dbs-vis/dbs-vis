@@ -109,6 +109,7 @@
 								$conn = null;
 							?>
 						</select>
+						<br>
 						Auswahl der gewünschten Bibliothek aus der Liste.
 					</label>
 					<br><br>
