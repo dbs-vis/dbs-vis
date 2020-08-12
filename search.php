@@ -101,6 +101,8 @@
 				</header>
 				<form action="data.php" method="get">
 					<label>
+						Auswahl der gewünschten Bibliothek aus der Liste.
+						<br><br>
 						<select name=id>
 							<?php
 								$sql = "SELECT dbsid, name FROM bibs_data_table;";
@@ -110,8 +112,6 @@
 								$conn = null;
 							?>
 						</select>
-						<br>
-						Auswahl der gewünschten Bibliothek aus der Liste.
 					</label>
 					<br><br>
   					<input type="submit" value="Finden">
