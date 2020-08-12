@@ -2,6 +2,7 @@
     require './requires/header.php';
 	echo '<script src="https://cdn.bokeh.org/bokeh/release/bokeh-2.1.1.min.js"></script>';
 ?>
+		<aside>
 		</aside>
 		<main>
 		<?php require './requires/mysql.php';
