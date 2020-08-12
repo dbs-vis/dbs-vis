@@ -34,13 +34,13 @@
 			?>
 		</title>
 		<link rel="stylesheet" href="./stylesheet.css">
-		<link rel="icon" type="image/svg+xml" href="./graphics/favicon.svg" sizes="any">
+		<link rel="icon" type="image/svg+xml" href="./graphics/logo.svg" sizes="any">
 	</head>
 	<body>
 		<header>
 			<div id="headline">
 				<a href="./index.php" class="head">
-					<img id="logo" alt="" src="graphics/logo.svg">
+					<img id="logo" alt="" src="./graphics/logo.svg">
 					<h1>DBS-VIS</h1>
 				</a>
 			</div>
