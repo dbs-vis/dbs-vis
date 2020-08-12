@@ -39,11 +39,11 @@
 						echo '<div class="divTable" style="width: 100%;border: 1px solid #000;" >';
 						echo '<div class="divTableBody">';
 						echo '<div class="divTableRow">';
-						echo '<div class="divTableCell">Anschrift:</div>';
-						echo '<div class="divTableCell">Öffnungszeiten:</div>';
-						echo '<div class="divTableCell">Weitere Informationen:</div></div>';
+						echo '<div class="divTableCell">Kontakt</div>';
+						echo '<div class="divTableCell">Öffnungszeiten</div>';
+						echo '<div class="divTableCell">Weitere Informationen</div></div>';
 						echo '<div class="divTableRow">';
-						echo '<div class="divTableCell">'.$row["name"].'<br>'.$row["strasse"].'<br>'.$row["plz"].' '.$row["ort"].'<br>Tel: '.$row["vorwahl"].' '.$row["tel"].'<br>Web: '.$row["url"].'</div>';
+						echo '<div class="divTableCell">'.$row["name"].'<br>'.$row["strasse"].'<br>'.$row["plz"].' '.$row["ort"].'<br>Tel: '.$row["vorwahl"].' '.$row["tel"].'<br>Web: <a href="'.$row["url"].'">'.$row["url"].'</a></div>';
 						echo '<div class="divTableCell">'.$row["öffnungszeiten"].'</div>';
 						echo '<div class="divTableCell">Bestandsgrößenklasse: '.$row["bestandsgrößenklasse"].'<br>Unterhaltsträger: '.$row["unterhaltsträger"]."<br>DBV: ".$row["dbv"]."<br>Leitung: ".$row["leitung"].'</div>';
 						echo '</div></div></div>';
