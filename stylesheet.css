@@ -1,3 +1,6 @@
+a {
+	color: #0046B4;
+}
 a.head:any-link {
 	color: #FA820A;
 	text-decoration: none;
@@ -28,10 +31,13 @@ header {
 	display: grid;
 	text-align: center;
 }
+h2 {
+	color: #004678;
+}
 li {
 	display: inline;
 	list-style-type: none;
-	margin: 2em; /*Bestimmt die Abstände zwischen Navigationspunkten*/
+	margin: 2em;
 }
 main {
 	grid-column: 2 / 3;
@@ -56,7 +62,6 @@ nav {
 	font-size: 1.2em;
 }
 #logo {
-	/*background-color: #004678;*/
 	float: left;
 }
 #mapcontent {
@@ -73,7 +78,7 @@ nav {
 	display: table-row;
 }
 .divTableHeading {
-	background-color: #EEE;
+	background-color: #EEEEEE;
 	display: table-header-group;
 }
 .divTableCell, .divTableHead {
@@ -82,12 +87,12 @@ nav {
 	padding: 3px 10px;
 }
 .divTableHeading {
-	background-color: #EEE;
+	background-color: #EEEEEE;
 	display: table-header-group;
 	font-weight: bold;
 }
 .divTableFoot {
-	background-color: #EEE;
+	background-color: #EEEEEE;
 	display: table-footer-group;
 	font-weight: bold;
 }
@@ -97,5 +102,5 @@ nav {
 .guidanceList {
 	display: list-item;
 	list-style-type: disc;
-	margin: 0em; /*Bestimmt die Abstände zwischen Navigationspunkten*/
+	margin: 0em;
 }
