@@ -40,6 +40,7 @@
 				<p>Die <em>Karte</em> bietet für alle Bibliotheken einen Marker an. Klickt man auf einen Marker, öffnet sich ein Textfenster und der Name der Bibliothek, wie er in der DBS verwendet wird, erscheint. Dieser Name ist ein Link zur individuellen Datenseite für die Bibliothek.</p>
 				<p>Die <em>Liste</em> ist ein aufklappbares Formular und enthält alle Bibliotheksnamen. Zum Aufrufen der individuellen Datenseite für die Bibliothek, muss zuerst auf den Namen der Bibliothek in der aufgeklappten Liste und danach auf den Button "Finden" geklickt werden.</p>
 			</article>
+		</main>
 <?php
 	require './requires/footer.php';
 ?>		

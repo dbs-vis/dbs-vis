@@ -1,4 +1,3 @@
-		</main>
 		<footer>
 			<ul>
 				<?php

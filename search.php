@@ -117,6 +117,7 @@
   					<input type="submit" value="Finden">
 				</form>
 			</article>
+		</main>
 <?php
 	require './requires/footer.php';
 ?>	

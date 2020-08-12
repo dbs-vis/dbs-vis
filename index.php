@@ -23,6 +23,7 @@
 				</header>
 				Hier sollen mal die aktuellsten Blogeinträge zu sehen sein.
 			</article>
+		</main>
 <?php
 	require './requires/footer.php';
 ?>		

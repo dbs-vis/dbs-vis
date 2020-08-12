@@ -16,6 +16,7 @@
 				</header>
 				<p>Hier werden Sie zukünftig alle Publikationen finden, in denen DBS-VIS eine Rolle spielt.</p>
 			</article>
+		</main>
 <?php
 	require './requires/footer.php';
 ?>		

@@ -188,7 +188,7 @@
 					}
 					?>
 			</article>
-
+		</main>
 <?php
 	require './requires/footer.php';
 ?>
