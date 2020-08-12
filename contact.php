@@ -1,8 +1,7 @@
 <?php
 	require './requires/header.php';
 ?>
-
-		</div>
+		</aside>
 		<main>
 			<header>
 				<h2>Achtung, Baustelle!</h2>

@@ -1,7 +1,7 @@
 <?php
 	require './requires/header.php';
 ?>
-		</div>
+		</aside>
 		<main>
 			<article>
 				<header>

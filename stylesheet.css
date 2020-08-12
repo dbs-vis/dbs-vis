@@ -2,6 +2,14 @@ a.head:any-link {
 	color: #FA820A;
 	text-decoration: none;
 }
+aside {
+	grid-column: 1 / 2;
+	grid-row: 3 / 4;
+	background-color: #F2F2F2;
+	border-bottom: thin solid #808080;
+	border-right: thin solid #808080;
+	padding: 1em;
+}
 body {
     display: grid;
 	grid-template-columns: 1fr 7fr;
@@ -56,14 +64,6 @@ nav {
 	height: 75vh;
 	margin:0;
 	padding:0;
-}
-#pageactions {
-	grid-column: 1 / 2;
-	grid-row: 3 / 4;
-	background-color: #F2F2F2;
-	border-bottom: thin solid #808080;
-	border-right: thin solid #808080;
-	padding: 1em;
 }
 .divTable{
 	display: table;

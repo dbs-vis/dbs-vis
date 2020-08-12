@@ -2,7 +2,7 @@
 	require './requires/header.php';
 ?>
 			Hier befindet sich das Steuerungsfeld.
-		</div>
+		</aside>
 		<main>
 			<article>
 				<header>
