@@ -21,7 +21,7 @@
 				foreach ($pages as $index => $page) :
 					$listitem = "<li";
 					if ($_SERVER["SCRIPT_NAME"] == "/dbs-vis/" . $page["name"] . ".php") :
-						$listitem .= " aria-current='page'><a>";
+						$listitem .= " aria-current='page'><a id='current-page'>";
 						$title = $page["linktext"] . " - DBS-VIS";
 					else :
 						$listitem .= "><a href='" . $page["name"] . ".php'>";

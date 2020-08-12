@@ -56,6 +56,10 @@ nav {
 #bib_list {
 	overflow-y: scroll;
 }
+#current-page {
+	color: #000000;
+	font-weight: bold;
+}
 #headline {
 	display: inline-block;
 	font-weight: bold;
