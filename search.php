@@ -95,7 +95,7 @@
 
 				</script>
 			</article>
-			<article id="bib_list">
+			<article>
 				<header>
 					<h2 id="list">Liste</h2>
 				</header>
