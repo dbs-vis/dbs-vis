@@ -1,13 +1,20 @@
 a {
 	color: #0046B4;
+	background-color: #FFFFFF;
 }
 a.head:any-link {
 	color: #FA820A;
+	background-color: #FFFFFF;
 	text-decoration: none;
+}
+a:focus, a:hover {
+	color: #FA820A;
+	background-color: #FFFFFF;
 }
 aside {
 	grid-column: 1 / 2;
 	grid-row: 3 / 4;
+	color: #000000;
 	background-color: #F2F2F2;
 	border-bottom: thin solid #808080;
 	border-right: thin solid #808080;
@@ -33,6 +40,7 @@ header {
 }
 h2 {
 	color: #004678;
+	background-color: #FFFFFF;
 }
 li {
 	display: inline;
@@ -55,6 +63,7 @@ nav {
 }
 #current-page {
 	color: #000000;
+	background-color: #FFFFFF;
 	font-weight: bold;
 }
 #headline {
@@ -75,30 +84,28 @@ nav {
 	display: table;
 	width: 100%;
 }
-.divTableRow {
-	display: table-row;
-}
-.divTableHeading {
-	background-color: #EEEEEE;
-	display: table-header-group;
+.divTableBody {
+	display: table-row-group;
 }
 .divTableCell, .divTableHead {
 	border: 1px solid #999999;
 	display: table-cell;
 	padding: 3px 10px;
 }
-.divTableHeading {
-	background-color: #EEEEEE;
-	display: table-header-group;
-	font-weight: bold;
-}
 .divTableFoot {
+	color: #000000;
 	background-color: #EEEEEE;
 	display: table-footer-group;
 	font-weight: bold;
 }
-.divTableBody {
-	display: table-row-group;
+.divTableHeading {
+	color: #000000;
+	background-color: #EEEEEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableRow {
+	display: table-row;
 }
 .guidanceList {
 	display: list-item;
