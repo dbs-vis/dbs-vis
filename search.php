@@ -105,7 +105,7 @@
 						<br><br>
 						<select name=id>
 							<?php
-								$sql = "SELECT dbsid, name FROM bibs_data_table;";
+								$sql = "SELECT dbsid, name FROM bibs_data_table ORDER BY ort;";
 								foreach ($conn->query($sql) as $row) {
 									echo "<option value=", $row["dbsid"], ">", $row["name"], "</option>";
 								}
