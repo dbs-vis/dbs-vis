@@ -35,9 +35,9 @@ require './requires/mysql.php';
 					</thead>
 					<tbody>
 						<tr>
-							<td id="contact" class="formalData"><?php echo $row["name"].'<br>'.$row["strasse"].'<br>'.$row["plz"].' '.$row["ort"].'<br>Tel: '.$row["vorwahl"].' '.$row["tel"].'<br>Web: <a href="'.$row["url"].'">'.$row["url"].'</a>'; ?></td>
-							<td id="openingHours" class="formalData"><?php echo $row["öffnungszeiten"]; ?></td>
-							<td id="informations" class="formalData">Bestandsgrößenklasse: <?php echo $row["bestandsgrößenklasse"].'<br>Unterhaltsträger: '.$row["unterhaltsträger"]."<br>DBV: ".$row["dbv"]."<br>Leitung: ".$row["leitung"]; ?></td>
+							<td headers="contact" class="formalData"><?php echo $row["name"].'<br>'.$row["strasse"].'<br>'.$row["plz"].' '.$row["ort"].'<br>Tel: '.$row["vorwahl"].' '.$row["tel"].'<br>Web: <a href="'.$row["url"].'">'.$row["url"].'</a>'; ?></td>
+							<td headers="openingHours" class="formalData"><?php echo $row["öffnungszeiten"]; ?></td>
+							<td headers="informations" class="formalData">Bestandsgrößenklasse: <?php echo $row["bestandsgrößenklasse"].'<br>Unterhaltsträger: '.$row["unterhaltsträger"]."<br>DBV: ".$row["dbv"]."<br>Leitung: ".$row["leitung"]; ?></td>
 						</tr>
 					</tbody>
 				</table>
