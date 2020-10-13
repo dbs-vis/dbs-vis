@@ -386,7 +386,7 @@ require './requires/mysql.php';
 								<tr>
 									<td></td>
 									<?php
-									foreach ($yearList as $curYear) {echo '<th id="'.$key.' '.$curYear.'" scope="col">'.$curYear.'</th>';}
+									foreach ($yearList as $curYear) {echo '<th id="'.$key.'_'.$curYear.'" scope="col">'.$curYear.'</th>';}
 									?>
 								</tr>
 							</thead>
@@ -397,9 +397,9 @@ require './requires/mysql.php';
 										echo '<th scope="row" class="rowHeading">'.$lib_name.'</th>';
 										foreach ($yearList as $curYear) {
 											if (isset ($libraryData[$curYear][0])) {
-												echo '<th headers="'.$key.' '.$curYear.'">'.number_format($libraryData[$curYear][0], $precision[$key], ',', '.').'</td>';
+												echo '<th headers="'.$key.'_'.$curYear.'">'.number_format($libraryData[$curYear][0], $precision[$key], ',', '.').'</td>';
 											} else {
-												echo '<th headers="'.$key.' '.$curYear.'">-</td>';
+												echo '<th headers="'.$key.'_'.$curYear.'">-</td>';
 											}
 										}
 									}
@@ -410,9 +410,9 @@ require './requires/mysql.php';
 									<?php
 									foreach ($yearList as $curYear) {
 										if (isset ($whiskersData[$curYear][1])) {
-											echo '<th headers="'.$key.' '.$curYear.'">'.number_format($whiskersData[$curYear][1], $precision[$key], ',', '.').'</td>';
+											echo '<th headers="'.$key.'_'.$curYear.'">'.number_format($whiskersData[$curYear][1], $precision[$key], ',', '.').'</td>';
 										} else {
-											echo '<th headers="'.$key.' '.$curYear.'">-</td>';
+											echo '<th headers="'.$key.'_'.$curYear.'">-</td>';
 										}
 									}
 									?>
@@ -422,9 +422,9 @@ require './requires/mysql.php';
 									<?php
 									foreach ($yearList as $curYear) {
 										if (isset ($boxesData[$curYear][2])) {
-											echo '<th headers="'.$key.' '.$curYear.'">'.number_format($boxesData[$curYear][2], $precision[$key], ',', '.').'</td>';
+											echo '<th headers="'.$key.'_'.$curYear.'">'.number_format($boxesData[$curYear][2], $precision[$key], ',', '.').'</td>';
 										} else {
-											echo '<th headers="'.$key.' '.$curYear.'">-</td>';
+											echo '<th headers="'.$key.'_'.$curYear.'">-</td>';
 										}
 									}
 									?>
@@ -434,9 +434,9 @@ require './requires/mysql.php';
 									<?php
 									foreach ($yearList as $curYear) {
 										if (isset ($boxesData[$curYear][1])) {
-											echo '<th headers="'.$key.' '.$curYear.'">'.number_format($boxesData[$curYear][1], $precision[$key], ',', '.').'</td>';
+											echo '<th headers="'.$key.'_'.$curYear.'">'.number_format($boxesData[$curYear][1], $precision[$key], ',', '.').'</td>';
 										} else {
-											echo '<th headers="'.$key.' '.$curYear.'">-</td>';
+											echo '<th headers="'.$key.'_'.$curYear.'">-</td>';
 										}
 									}
 									?>
@@ -446,9 +446,9 @@ require './requires/mysql.php';
 									<?php
 									foreach ($yearList as $curYear) {
 										if (isset ($boxesData[$curYear][0])) {
-											echo '<th headers="'.$key.' '.$curYear.'">'.number_format($boxesData[$curYear][0], $precision[$key], ',', '.').'</td>';
+											echo '<th headers="'.$key.'_'.$curYear.'">'.number_format($boxesData[$curYear][0], $precision[$key], ',', '.').'</td>';
 										} else {
-											echo '<th headers="'.$key.' '.$curYear.'">-</td>';
+											echo '<th headers="'.$key.'_'.$curYear.'">-</td>';
 										}
 									}
 									?>
@@ -458,9 +458,9 @@ require './requires/mysql.php';
 									<?php
 									foreach ($yearList as $curYear) {
 										if (isset ($whiskersData[$curYear][0])) {
-											echo '<th headers="'.$key.' '.$curYear.'">'.number_format($whiskersData[$curYear][0], $precision[$key], ',', '.').'</td>';
+											echo '<th headers="'.$key.'_'.$curYear.'">'.number_format($whiskersData[$curYear][0], $precision[$key], ',', '.').'</td>';
 										} else {
-											echo '<th headers="'.$key.' '.$curYear.'">-</td>';
+											echo '<th headers="'.$key.'_'.$curYear.'">-</td>';
 										}
 									}
 									?>
