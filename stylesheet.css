@@ -69,6 +69,7 @@ nav {
 table {
 	background-color: #FFFFFF;
 	border-collapse: collapse;
+	color: #000000;
 	display: inline-block;
 	margin: auto;
 	width: 100%;
@@ -83,6 +84,7 @@ td {
 	text-align: right;
 }
 th {
+	background-color: #F2F2F2;
 	border: 1px solid #808080;
 	color: #000000;
 	font-weight: bold;
@@ -90,6 +92,7 @@ th {
 }
 thead {
 	background-color: #F2F2F2;
+	color: #000000;
 }
 tr {
 	display: table-row;
@@ -136,6 +139,7 @@ tr {
 }
 .rowHeading {
 	background-color: #F2F2F2;
+	color: #000000;
 }
 .subheading {
 	font-weight: bold;
