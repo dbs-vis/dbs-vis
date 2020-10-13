@@ -12,10 +12,10 @@ require './requires/mysql.php';
 				</header>
 				<?php
 				//prepare scripts
-				echo '<script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.2.1.min.js"></script>';
-				echo '<script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.2.1.min.js"></script>';
-				echo '<script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.2.1.min.js"></script>';
-				echo '<script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-api-2.2.1.min.js"></script>';
+				echo '<script src="https://cdn.bokeh.org/bokeh/release/bokeh-2.2.1.min.js"></script>';
+				echo '<script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.2.1.min.js"></script>';
+				echo '<script src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.2.1.min.js"></script>';
+				echo '<script src="https://cdn.bokeh.org/bokeh/release/bokeh-api-2.2.1.min.js"></script>';
 				//prepare sql-query
 				$getName = $conn->prepare("SELECT name,strasse,plz,ort,vorwahl,tel,url,öffnungszeiten,bestandsgrößenklasse,unterhaltsträger,dbv,leitung FROM bibs_data_table where dbsid= ?");
 				$getName->execute(array($_GET['id']));
@@ -108,8 +108,8 @@ require './requires/mysql.php';
 				<div class="container">
 					<!--radar chart-->
 					<figure id="radarchart">
-						<script type="text/javascript" src="js/charts.js"></script>
-						<script type="text/javascript">
+						<script src="js/charts.js"></script>
+						<script>
 							<?php
 							$getBibName = $conn->prepare("SELECT bname FROM raw_data_table WHERE cyear = (SELECT MAX(cyear) FROM raw_data_table) AND dbsid= ?");
 							$getBibName->execute(array($_GET['id']));
@@ -375,7 +375,7 @@ require './requires/mysql.php';
 						</div>
 						<br>
 						<figure>
-							<script type="text/javascript">
+							<script>
 								CHARTS.init([<?php echo json_encode($counter).','.json_encode($boxesData).','.json_encode($whiskersData).','.json_encode($outliersData).','.json_encode($libraryData) ?>])
 								CHARTS.boxplot();
 							</script>
