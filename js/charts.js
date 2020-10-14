@@ -16,7 +16,6 @@ var CHARTS = CHARTS || (function() {
 			}
 
 			// scale values
-			// NewValue = (((OldValue - OldMin) * (NewMax - NewMin)) / (OldMax - OldMin)) + NewMin
 			function scale(oldMin, oldMax, oldVal) {
 				oldVal = oldVal || oldMin;
 				if ((oldMax - oldMin)==0)
@@ -213,7 +212,7 @@ var CHARTS = CHARTS || (function() {
 			const yr = new Bokeh.DataRange1d({start: 0})
             var p = plt.figure({
                 tools: tools,
-				plot_width: 150 * Object.keys(_args[1]).length,
+				sizing_mode: "scale_width",
 				y_range: yr
            });
 			p.xaxis[0].ticker.desired_num_ticks = Object.keys(_args[1]).length;
