@@ -1,5 +1,4 @@
 <?php
-
 //Variables for connection establishment. charset for UTF-8, because of umlauts
 $dsn = 'mysql:dbname=dbs_vis_db;host=localhost;charset=utf8';
 $user = 'root';
@@ -15,6 +14,4 @@ catch (PDOException $e) {
 	echo 'Connection failed: ' . $e->getMessage() . "<br/>";
 	die();
 }
-
 ?>
-

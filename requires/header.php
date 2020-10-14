@@ -18,17 +18,17 @@
 			];
 
 			$title = "Startseite - DBS-VIS";
-			foreach ($pages as $index => $page) :
+			foreach ($pages as $index => $page) {
 				$listitem = "<li";
-				if ($_SERVER["SCRIPT_NAME"] == "/dbs-vis/" . $page["name"] . ".php") :
+				if ($_SERVER["SCRIPT_NAME"] == "/dbs-vis/" . $page["name"] . ".php") {
 					$listitem .= " aria-current='page'><a id='current-page'>";
 					$title = $page["linktext"] . " - DBS-VIS";
-				else :
+				} else {
 					$listitem .= "><a href='" . $page["name"] . ".php'>";
-				endif;
+				};
 				$listitem .= $page["linktext"] . "</a></li>";
 				$pages[$index]["listitem"] = $listitem;	
-			endforeach;
+			};
 			
 			echo $title;
 			?>
@@ -48,11 +48,11 @@
 		<nav>
 			<ul>
 				<?php
-				foreach ($pages as $page) :
-					if ($page["place"] == "header"):
+				foreach ($pages as $page) {
+					if ($page["place"] == "header") {
 						echo $page["listitem"];
-					endif;
-				endforeach;
+					};
+				};
 				?>
 			</ul>
 		</nav>
