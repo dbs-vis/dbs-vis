@@ -1,20 +1,20 @@
 a {
 	background-color: #FFFFFF;
-	color: #0046B4;	
+	color: #0074E8;	
 }
 a.head:any-link {
 	background-color: #FFFFFF;
-	color: #FA820A;
+	color: #FF5500;
 	text-decoration: none;
 }
 a:focus, a:hover {
 	background-color: #FFFFFF;
-	color: #FA820A;
+	color: #FF5500;
 }
 aside {
-	background-color: #F2F2F2;
-	border-bottom: thin solid #808080;
-	border-right: thin solid #808080;
+	background-color: #CFCFCF;
+	border-bottom: thin solid #595959;
+	border-right: thin solid #595959;
 	color: #000000;
 	grid-column: 1 / 2;
 	padding: 1em;
@@ -41,7 +41,7 @@ header {
 }
 h2, h3 {
 	background-color: #FFFFFF;
-	color: #004678;
+	color: #0057AE;
 	text-align: center;
 }
 li {
@@ -50,14 +50,14 @@ li {
 	margin: 2em;
 }
 main {
-	border-bottom: thin solid #808080;
+	border-bottom: thin solid #595959;
 	grid-column: 2 / 3;
 	padding: 1em;
 }
 nav {
 	align-items: center;
-	border-bottom: thin solid #808080;
-	border-top: thin solid #808080;
+	border-bottom: thin solid #595959;
+	border-top: thin solid #595959;
 	grid-column: 1 / 3;
 	text-align: center;
 }
@@ -73,20 +73,20 @@ tbody {
 	display: table-row-group;
 }
 td {
-	border: 1px solid #808080;
+	border: 1px solid #595959;
 	display: table-cell;
 	padding: 0.3em;
 	text-align: right;
 }
 th {
-	background-color: #F2F2F2;
-	border: 1px solid #808080;
+	background-color: #CFCFCF;
+	border: 1px solid #595959;
 	color: #000000;
 	font-weight: bold;
 	padding: 0.3em;
 }
 thead {
-	background-color: #F2F2F2;
+	background-color: #CFCFCF;
 	color: #000000;
 }
 tr {
@@ -133,7 +133,7 @@ tr {
 	text-align: center;
 }
 .rowHeading {
-	background-color: #F2F2F2;
+	background-color: #CFCFCF;
 	color: #000000;
 }
 .subheading {

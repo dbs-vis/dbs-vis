@@ -68,7 +68,6 @@ var CHARTS = CHARTS || (function() {
 			var multi_line = new Bokeh.MultiLine({
 				xs: {field: "xs"},
 				ys: {field: "ys"},
-				line_color: "gray",
 				line_width: 3,
 				line_alpha: 0.1
 			});
@@ -79,7 +78,6 @@ var CHARTS = CHARTS || (function() {
 			var multi_line = new Bokeh.MultiLine({
 				xs: {field: "xs"},
 				ys: {field: "ys"},
-				line_color: "gray",
 				line_width: 3,
 				line_alpha: 0.1,
 				line_dash: [6],
@@ -137,7 +135,7 @@ var CHARTS = CHARTS || (function() {
 				}
 			}
 
-			var colors = ["#B2B2B2", "#FA820A"];
+			var colors = ["#595959", "#FF5500"];
 			var bibsLabels = ["Median", _args[4]];
 
 			patches.push(medTemp);
@@ -238,9 +236,9 @@ var CHARTS = CHARTS || (function() {
 				top: {field: "top"},
 				bottom: {field: "bottom"},
 				width: 0.75,
-				fill_color: "#B2B2B2",
+				fill_color: "#CFCFCF",
 				fill_alpha: 0.4,
-				line_color: "#A2A2A2",
+				line_color: "#595959",
 				line_alpha: 0.8,
 				line_width: 3
            }); 
@@ -264,7 +262,7 @@ var CHARTS = CHARTS || (function() {
 				y0: {field: "y0"},
 				x1: {field: "x1"},
 				y1: {field: "y1"},
-				line_color: "black",
+				line_color: "#595959",
 				line_alpha: 0.8,
 				line_width: 3
            }); 
@@ -279,7 +277,7 @@ var CHARTS = CHARTS || (function() {
 				y0: {field: "y0"},
 				x1: {field: "x1"},
 				y1: {field: "y1"},
-				line_color: "black",
+				line_color: "#595959",
 				line_alpha: 0.8,
 				line_width: 3
            }); 
@@ -302,7 +300,7 @@ var CHARTS = CHARTS || (function() {
 				y: {field: "y"},
 				size: 5,
 				fill_alpha: 0.4,
-				fill_color: "#787878",
+				fill_color: "#CFCFCF",
 				line_alpha: 0.4,
 				line_width: 3
            }); 
@@ -319,7 +317,7 @@ var CHARTS = CHARTS || (function() {
 			var libpoints_line = new Bokeh.Line({
 				xs: {field: "x"},
 				ys: {field: "y"},
-				line_color: "#FA820A",
+				line_color: "#FF5500",
 				line_width: 3,
 				line_alpha: 1
 			});
@@ -329,9 +327,9 @@ var CHARTS = CHARTS || (function() {
 				x: {field: "x"},
 				y: {field: "y"},
 				size: 8,
-				fill_color: "#FA820A",
+				fill_color: "#FF5500",
 				fill_alpha: 0.8,
-				line_color: "black",
+				line_color: "#FF5500",
 				line_alpha: 0.8,
 				line_width: 3
            }); 
