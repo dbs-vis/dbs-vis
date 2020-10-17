@@ -59,7 +59,7 @@ require './requires/mysql.php';
 				$operating_figures = array (
 					'B.1.3.1' => 'Nutzungsfläche zu Primärnutzerschaft',
 					'B.1.3.2' => 'Arbeitsplätze zu Primärnutzerschaft',
-					'B.1.4.1' => 'Belegschaft zu Primärnutzerschaft',
+					'B.1.4.1' => 'Personal zu Primärnutzerschaft',
 					'B.2.2.1' => 'Bibliotheksbesuche zu Primärnutzerschaft',
 					'B.2.2.5' => 'Schulungsbesuche zu Primärnutzerschaft',
 					'B.3.1.2' => 'Erwerbungskosten pro Bestandsnutzung',
