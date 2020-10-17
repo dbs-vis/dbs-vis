@@ -467,6 +467,7 @@ require './requires/mysql.php';
 								</tr>
 							</tbody>
 						</table>
+						<p>Erläuterungen zu dieser Kennzahl befinden sich in der <a href="<?php echo './guidance.php#'. $key; ?>">Anleitung</a>.</p>
 					</section>
 				<?php
 					$counter++;
