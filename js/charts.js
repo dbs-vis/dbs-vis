@@ -137,6 +137,7 @@ var CHARTS = CHARTS || (function() {
 
 			var colors = ["#595959", "#FF5500"];
 			var bibsLabels = ["Median", _args[4]];
+			var lines = [4, "solid"];
 
 			patches.push(medTemp);
 			if(typeof(_args[4]) != "undefined") {
@@ -162,7 +163,8 @@ var CHARTS = CHARTS || (function() {
 					fill_alpha: 0.5,
 					line_color: colors[counter],
 					line_alpha: 1,
-					line_width: 3
+					line_width: 3,
+					line_dash: [lines[counter]]
 				});
 			
 				glyph_renderer = p.add_glyph(patch_glyph, patches_source);
