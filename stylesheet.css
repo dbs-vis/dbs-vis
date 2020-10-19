@@ -107,19 +107,24 @@ tr {
 }
 #mapcontent {
 	height: 75vh;
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 0;
 	width: 100%;
 }
 #radarchart {
-	display:inline-block;
-	margin:auto;
-	width:100%;
+	display: inline-block;
+	margin: auto;
+	width: 100%;
 }
 .container {
-	display:flex;
-	position:relative;
-	text-align:center;
+	display: flex;
+	position: relative;
+	text-align: center;
+}
+.css-validator {
+	border: 0;
+	width: 88px;
+	height: 31px;
 }
 .formalData {
 	text-align: left;
