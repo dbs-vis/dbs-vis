@@ -11,11 +11,10 @@ require './requires/mysql.php';
 					<h2>Formale Daten</h2>
 				</header>
 				<?php
-				//prepare scripts
-				echo '<script src="https://cdn.bokeh.org/bokeh/release/bokeh-2.2.1.min.js"></script>';
-				echo '<script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.2.1.min.js"></script>';
-				echo '<script src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.2.1.min.js"></script>';
-				echo '<script src="https://cdn.bokeh.org/bokeh/release/bokeh-api-2.2.1.min.js"></script>';
+				//load scripts
+				echo '<script crossorigin="anonymous" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.2.3.min.js"></script>';
+				echo '<script crossorigin="anonymous" src="https://cdn.bokeh.org/bokeh/release/bokeh-api-2.2.3.min.js"></script>';
+				
 				//prepare sql-query
 				$getName = $conn->prepare("SELECT name,strasse,plz,ort,vorwahl,tel,url,öffnungszeiten,bestandsgrößenklasse,unterhaltsträger,dbv,leitung FROM bibs_data_table where dbsid= ?");
 				$getName->execute(array($_GET['id']));
