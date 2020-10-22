@@ -2,7 +2,6 @@
 	require './requires/header.php';
 ?>
 		<aside>
-			Hier befindet sich das Steuerungsfeld.
 		</aside>
 		<main>
 			<article>
