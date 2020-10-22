@@ -23,9 +23,7 @@
 					}
 					
 					function erstelleKarte() {
-						// CSS laden
 						loadCSS("https://unpkg.com/leaflet@1.4.0/dist/leaflet.css");
-						// Leafletscript laden
 						loadScript("https://unpkg.com/leaflet@1.4.0/dist/leaflet.js", kartenScript);
 					}
 				
@@ -33,7 +31,7 @@
 						var mapcanvas = document.querySelector("#mapcontent");
 						mapcanvas.innerHTML = "";
 						
-						// Karten anlegen
+						// create map
 						var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 							maxZoom: 19,
 							attribution: 'Map data &copy;<a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>'
@@ -41,14 +39,14 @@
 						
 						var map = L.map(mapcanvas, { layers: osm, tap: false } ) ;
 						
-						// Mit Maßstab
+						// define map scale
 						L.control.scale({imperial:false}).addTo(map);
 						
-						//Kartenausschnitt wählen
+						// define map section
 						var bounds = [ [55.4, 5.7], [46.4, 17.2] ];
 						map.fitBounds( bounds );
 						
-						// Karte bei resize neu skalieren
+						// resize map
 						map.on("resize", function(e){
 							map.fitBounds( bounds );
 						});
@@ -83,7 +81,7 @@
 						}
 						scr.src = url;
 						document.getElementsByTagName('head')[0].appendChild(scr);
-					} // LoadScript
+					}
 
 					function loadCSS(url) {
 						var l = document.createElement("link");
@@ -91,8 +89,7 @@
 						l.rel = "stylesheet";
 						l.href = url;
 						document.getElementsByTagName("head")[0].appendChild(l);
-					} // LoadCSS
-
+					}
 				</script>
 			</article>
 			<article>
