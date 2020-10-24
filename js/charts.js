@@ -226,7 +226,7 @@ var CHARTS = CHARTS || (function() {
 			var btm = [];
 			var mid = [];
 			var top = [];
-			Object.keys(_args[1]).forEach(function(key,index) {
+			Object.keys(_args[1]).forEach(function(key) {
 				x.push(parseInt(key));
 				btm.push(parseFloat(_args[1][key][0]));
 				mid.push(parseFloat(_args[1][key][1]));
@@ -253,7 +253,7 @@ var CHARTS = CHARTS || (function() {
 			var x = [];
 			var y_btm = [];
 			var y_top = [];
-			Object.keys(_args[2]).forEach(function(key,index) {
+			Object.keys(_args[2]).forEach(function(key) {
 				x.push(parseInt(key));
 				y_btm.push(parseFloat(_args[2][key][0]));
 				y_top.push(parseFloat(_args[2][key][1]));
@@ -291,7 +291,7 @@ var CHARTS = CHARTS || (function() {
 			// add outliers to plot
 			var out_x = [];
 			var out_y = [];
-			Object.keys(_args[3]).forEach(function(key,index) {
+			Object.keys(_args[3]).forEach(function(key) {
 				_args[3][key].forEach(function(element) {
 					out_x.push(parseInt(key));
 					out_y.push(parseFloat(element));
@@ -313,7 +313,7 @@ var CHARTS = CHARTS || (function() {
 			// add library points
 			var x = [];
 			var y = [];
-			Object.keys(_args[4]).forEach(function(key,index) {
+			Object.keys(_args[4]).forEach(function(key) {
 				x.push(parseInt(key));
 				y.push(parseFloat(_args[4][key][0]));
 			});
