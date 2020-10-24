@@ -4,6 +4,7 @@ var CHARTS = CHARTS || (function() {
 		init : function(Args) {
 			_args = Args;
         	},
+			
 		radarchart: function() {
 			// generate point sequence
 			function linspace(x0, xN, n) {
@@ -56,6 +57,7 @@ var CHARTS = CHARTS || (function() {
 				ysp.push(y);
 			})
 
+			// create diagonal lines
 			var x = [];
 			var y = [];
 			for(var i=0; i < 4; ++i) {
@@ -63,13 +65,14 @@ var CHARTS = CHARTS || (function() {
 				y.push([ysp[ysp.length - 1][i], ysp[ysp.length - 1][i+4]]);
 			}
 
-			// add a multi circle mesh to plot
+			// add the multi circle mesh to plot
 			var mesh_source = new Bokeh.ColumnDataSource({data: {xs: xsp.concat(x), ys: ysp.concat(y)}});
 			var multi_line = new Bokeh.MultiLine({
 				xs: {field: "xs"},
 				ys: {field: "ys"},
 				line_width: 3,
-				line_alpha: 0.1
+				line_alpha: 0.1,
+				line_color: "#595959"
 			});
 			p.add_glyph(multi_line, mesh_source);
 
@@ -135,16 +138,15 @@ var CHARTS = CHARTS || (function() {
 				}
 			}
 
-			var colors = ["#595959", "#FF5500"];
-			var bibsLabels = ["Median", _args[4]];
-			var lines = [4, "solid"];
-
 			patches.push(medTemp);
 			if(typeof(_args[4]) != "undefined") {
 				patches.push(valTemp);
 			}
 
-			var items = []
+			var colors = ["#595959", "#FF5500"];
+			var bibsLabels = ["Median", _args[4]];
+			var lines = [4, "solid"];
+			var items = [];
 			var counter = 0;
 			patches.forEach((patch) => {
 				var xpt = [];
