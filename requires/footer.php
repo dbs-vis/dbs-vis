@@ -7,7 +7,7 @@
 						};
 					};
 				?>
-				<li>Stand: 22.10.2020</li>
+				<li>Stand: 25.10.2020</li>
 				<li>
 					<a href="https://jigsaw.w3.org/css-validator/check/referer">
 						<img id="css-validator" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS ist valide!" />
