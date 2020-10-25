@@ -142,7 +142,7 @@ require './requires/mysql.php';
 								echo '</tr>';
 								do {
 									echo '<tr>';
-										echo '<td headers="number" class="legend">'.array_keys($operating_figures)[$counter].'</td>';
+										echo '<td headers="number" class="legend"><a href="./guidance.php#'.array_keys($operating_figures)[$counter].'">'.array_keys($operating_figures)[$counter].'</a></td>';
 										echo '<td headers="name" class="legend">'.array_values($operating_figures)[$counter].'</td>';
 									echo '</tr>';
 								} while (++$counter%2 != 1);
