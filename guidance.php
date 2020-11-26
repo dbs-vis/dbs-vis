@@ -103,7 +103,7 @@
 						<li class="guidanceList"><em>Englische Bezeichnung</em>: Acquisition Cost per Collection Use</li>
 						<li class="guidanceList"><em>Bereich</em>: Effizienz</li>
 						<li class="guidanceList"><em>Kategorie</em>: Bestand</li>
-						<li class="guidanceList"><em>Berechnung</em>: Die Erwerbungskosten in Euro werden durch die Anzahl der Bestandsnutzungen dividiert.</li>
+						<li class="guidanceList"><em>Berechnung</em>: Die Erwerbungskosten werden durch die Anzahl der Bestandsnutzungen dividiert.</li>
 						<li class="guidanceList"><em>Erwerbungskosten in Euro</em>: Erwerbung gesamt [149]</li>
 						<li class="guidanceList"><em>Anzahl der Bestandsnutzungen</em>: Entleihungen nach physischen Einheiten insgesamt [167] - Entleihungen, davon: Verlängerungen auf Benutzerantrag [170] + Präsenzbenutzungen [174] + Vollanzeige von Zeitschriftenartikeln [183] + Vollanzeige von digitalen Einzeldokumenten [184] + Positiv erledigte aktive Bestellungen insgesamt [191]</li>
 						<li class="guidanceList"><em>Einheit</em>: Euro Erwerbungskosten pro Bestandsnutzung</li>
@@ -115,8 +115,8 @@
 						<li class="guidanceList"><em>Englische Bezeichnung</em>: Cost per User</li>
 						<li class="guidanceList"><em>Bereich</em>: Effizienz</li>
 						<li class="guidanceList"><em>Kategorie</em>: Allgemein</li>
-						<li class="guidanceList"><em>Berechnung</em>: Die Gesamtausgaben in Euro werden durch die Anzahl derer dividiert, die im Berichtsjahr mindestens einmal etwas entliehen haben.</li>
-						<li class="guidanceList"><em>Gesamtausgaben in Euro</em>: Erwerbung gesamt [149]</li>
+						<li class="guidanceList"><em>Berechnung</em>: Die Gesamtausgaben werden durch die Anzahl derer dividiert, die im Berichtsjahr mindestens einmal etwas entliehen haben.</li>
+						<li class="guidanceList"><em>Gesamtausgaben in Euro</em>: Ausgaben insgesamt [162]</li>
 						<li class="guidanceList"><em>Anzahl derer, die im Berichtsjahr mindestens einmal etwas entliehen haben</em>: Entleihende [4]</li>
 						<li class="guidanceList"><em>Einheit</em>: Euro Gesamtausgaben pro Personen oder Institutionen, die im Berichtsjahr mindestens einmal etwas entliehen haben</li>
 					</ul>
