@@ -12,8 +12,8 @@ require './requires/mysql.php';
 				</header>
 				<?php
 				//load scripts
-				echo '<script crossorigin="anonymous" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.2.3.min.js"></script>';
-				echo '<script crossorigin="anonymous" src="https://cdn.bokeh.org/bokeh/release/bokeh-api-2.2.3.min.js"></script>';
+				echo '<script crossorigin="anonymous" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.3.2.min.js"></script>';
+				echo '<script crossorigin="anonymous" src="https://cdn.bokeh.org/bokeh/release/bokeh-api-2.3.2.min.js"></script>';
 				
 				//prepare sql-query
 				$getName = $conn->prepare("SELECT name,strasse,plz,ort,vorwahl,tel,url,öffnungszeiten,bestandsgrößenklasse,unterhaltsträger,dbv,leitung FROM bibs_data_table where dbsid= ?");
