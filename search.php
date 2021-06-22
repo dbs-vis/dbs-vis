@@ -50,7 +50,9 @@
 							map.fitBounds( bounds );
 						});
 
-						<?php session_start(); require './requires/mysql.php';
+						<?php
+							session_start();
+							require './requires/mysql.php';
 
 							$sql = "SELECT dbsid, name, ST_X(pt) AS laenge, ST_Y(pt) AS breite FROM bibs_data_table;";
 							foreach ($conn->query($sql) as $row) {
